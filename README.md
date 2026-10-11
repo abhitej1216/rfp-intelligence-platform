@@ -2,7 +2,7 @@
 
 AI Engineering Assignment — RAG Search Engine & Multi-Agent System.
 
-High quality Demo video: https://drive.google.com/file/d/1_BEmgX3yMYK_Qetb627yZGkJLw2Smxyb/view?usp=sharing
+High quality Demo video: https://drive.google.com/file/d/1_BEmgX3yMYK_Qetb627yZGkJLw2Smxyb/view?usp=drive_link
 
 ## Setup
 
