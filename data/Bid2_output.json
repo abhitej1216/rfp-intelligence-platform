@@ -1,0 +1,182 @@
+{
+  "bid_id": "Contract_Affidavit.pdf",
+  "fields": {
+    "Bid Number": {
+      "value": "and has filed all of its annual reports, together with filing fees, with the\nMaryland State Department of Assessments and Taxation. The name and address of its resident\nagent (IF APPLICABLE) filed with the State Department of Assessments and Taxation is:\nName and Department ID Number:\nAddress:\nand t",
+      "sources": [
+        "5892a7967689e08fe84ce961d50dfffc30f8a933d1e8f1ddb1fdeedef832cb19",
+        "d864a740799d8f3d5baf56a16e108e66a0adacd90070b67d731b00e9e8b2b800",
+        "62bbb1e0ff8c712175f82f5500441692ca841f24d01a6d9a4044684d29b9150c"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Title": {
+      "value": "A. AUTHORITY\nI hereby affirm that I,\n(name of affiant) am the\n(title) and duly authorized representative of\n(name of business entity) and that I possess the legal\nauthority to make this affidavit on behalf of the business for which I am acting.\nB. CERTIFICATION OF REGISTRATION OR QUALIFICATION WITH ",
+      "sources": [
+        "d22119f3cdc4522066d1372977056e092585815405b01bd1bb866f4f554dbfb9",
+        "dbdbd3cfb487edc3783459d6ebcaceb214b4e6f3a82cbbb3829b88d194095d71"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Due Date": {
+      "value": "$200,000 or more, shall file with the State Board of Elections statements disclosing: (a) any\ncontributions made during the reporting period to a candidate for elective office in any primary or\ngeneral election; and (b) the name of each candidate to whom one or more contributions in a\ncumulative amo",
+      "sources": [
+        "7dec497fb94119c1b4a042efb624ef8cd0084aade941914b03fdc98356b1c1a7",
+        "d864a740799d8f3d5baf56a16e108e66a0adacd90070b67d731b00e9e8b2b800",
+        "c4eece18b3ec50bf2a9048b38e9c96734d7675b830bf7401b176bb65955108c3"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Bid Submission Type": {
+      "value": "to cover the six (6) month period ending October 31.\nE. DRUG AND ALCOHOL-FREE WORKPLACE\n(Applicable to all contracts unless the contract is for a law enforcement agency and the agency head\nor the agency head’s designee has determined that application of COMAR 21.11.08 and this\ncertification would be",
+      "sources": [
+        "d864a740799d8f3d5baf56a16e108e66a0adacd90070b67d731b00e9e8b2b800"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Term of Bid": {
+      "value": "and has filed all of its annual reports, together with filing fees, with the\nMaryland State Department of Assessments and Taxation. The name and address of its resident\nagent (IF APPLICABLE) filed with the State Department of Assessments and Taxation is:\nName and Department ID Number:\nAddress:\nand t",
+      "sources": [
+        "5892a7967689e08fe84ce961d50dfffc30f8a933d1e8f1ddb1fdeedef832cb19",
+        "dbdbd3cfb487edc3783459d6ebcaceb214b4e6f3a82cbbb3829b88d194095d71",
+        "7dec497fb94119c1b4a042efb624ef8cd0084aade941914b03fdc98356b1c1a7"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Pre Bid Meeting": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Installation": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Bid Bond Requirement": {
+      "value": "with the State of Maryland or its agencies during a\ncalendar year under which the business is to receive in the aggregate $100,000 or more shall, within\n30 days of the time when the aggregate value of the contracts, leases, or other agreements reaches\n$100,000, file with the Secretary of State of Ma",
+      "sources": [
+        "dbdbd3cfb487edc3783459d6ebcaceb214b4e6f3a82cbbb3829b88d194095d71",
+        "7dec497fb94119c1b4a042efb624ef8cd0084aade941914b03fdc98356b1c1a7"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Delivery Date": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Payment Terms": {
+      "value": "to maintain a drug and alcohol free workplace through\nimplementation of §E(2)(a)—(j), above.\n(3) If the business is an individual, the individual shall certify and agree as set forth in §E(4), below,\nthat the individual shall not engage in the unlawful manufacture, distribution, dispensing,\npossessi",
+      "sources": [
+        "e836c9343dba7d5f915343e3049e92ba0f412a07be948d288c07b11df12868f7"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Additional Documentation Required": {
+      "value": "A. AUTHORITY\nI hereby affirm that I,\n(name of affiant) am the\n(title) and duly authorized representative of\n(name of business entity) and that I possess the legal\nauthority to make this affidavit on behalf of the business for which I am acting.\nB. CERTIFICATION OF REGISTRATION OR QUALIFICATION WITH ",
+      "sources": [
+        "d22119f3cdc4522066d1372977056e092585815405b01bd1bb866f4f554dbfb9",
+        "5892a7967689e08fe84ce961d50dfffc30f8a933d1e8f1ddb1fdeedef832cb19",
+        "3db52d35822d092a9d4fdde0998d5fde20d7db81bc92cce3cd4de79043e111b5"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "MFG for Registration": {
+      "value": "A. AUTHORITY\nI hereby affirm that I,\n(name of affiant) am the\n(title) and duly authorized representative of\n(name of business entity) and that I possess the legal\nauthority to make this affidavit on behalf of the business for which I am acting.\nB. CERTIFICATION OF REGISTRATION OR QUALIFICATION WITH ",
+      "sources": [
+        "d22119f3cdc4522066d1372977056e092585815405b01bd1bb866f4f554dbfb9",
+        "3db52d35822d092a9d4fdde0998d5fde20d7db81bc92cce3cd4de79043e111b5"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Contract or Cooperative to use": {
+      "value": "and has filed all of its annual reports, together with filing fees, with the\nMaryland State Department of Assessments and Taxation. The name and address of its resident\nagent (IF APPLICABLE) filed with the State Department of Assessments and Taxation is:\nName and Department ID Number:\nAddress:\nand t",
+      "sources": [
+        "5892a7967689e08fe84ce961d50dfffc30f8a933d1e8f1ddb1fdeedef832cb19",
+        "dbdbd3cfb487edc3783459d6ebcaceb214b4e6f3a82cbbb3829b88d194095d71",
+        "7dec497fb94119c1b4a042efb624ef8cd0084aade941914b03fdc98356b1c1a7"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Model_no": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Part_no": {
+      "value": "A. AUTHORITY\nI hereby affirm that I,\n(name of affiant) am the\n(title) and duly authorized representative of\n(name of business entity) and that I possess the legal\nauthority to make this affidavit on behalf of the business for which I am acting.\nB. CERTIFICATION OF REGISTRATION OR QUALIFICATION WITH ",
+      "sources": [
+        "d22119f3cdc4522066d1372977056e092585815405b01bd1bb866f4f554dbfb9",
+        "5892a7967689e08fe84ce961d50dfffc30f8a933d1e8f1ddb1fdeedef832cb19",
+        "a0b6fe5baf4db793ab9e3f55fbfdb05005821824164cc20c2a03061fbe069b49"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Product": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "contact_info": {
+      "value": "and has filed all of its annual reports, together with filing fees, with the\nMaryland State Department of Assessments and Taxation. The name and address of its resident\nagent (IF APPLICABLE) filed with the State Department of Assessments and Taxation is:\nName and Department ID Number:\nAddress:\nand t",
+      "sources": [
+        "5892a7967689e08fe84ce961d50dfffc30f8a933d1e8f1ddb1fdeedef832cb19",
+        "dbdbd3cfb487edc3783459d6ebcaceb214b4e6f3a82cbbb3829b88d194095d71",
+        "a0b6fe5baf4db793ab9e3f55fbfdb05005821824164cc20c2a03061fbe069b49"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "company_name": {
+      "value": "A. AUTHORITY\nI hereby affirm that I,\n(name of affiant) am the\n(title) and duly authorized representative of\n(name of business entity) and that I possess the legal\nauthority to make this affidavit on behalf of the business for which I am acting.\nB. CERTIFICATION OF REGISTRATION OR QUALIFICATION WITH ",
+      "sources": [
+        "d22119f3cdc4522066d1372977056e092585815405b01bd1bb866f4f554dbfb9",
+        "d864a740799d8f3d5baf56a16e108e66a0adacd90070b67d731b00e9e8b2b800",
+        "c4eece18b3ec50bf2a9048b38e9c96734d7675b830bf7401b176bb65955108c3"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Bid Summary": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Product Specification": {
+      "value": "employees that the unlawful manufacture, distribution,\ndispensing, possession, or use of drugs, and the abuse of drugs or alcohol is prohibited in the\nbusiness' workplace and specifying the actions that will be taken against employees for\nviolation of these prohibitions;\n(c) Prohibit its employees f",
+      "sources": [
+        "c4eece18b3ec50bf2a9048b38e9c96734d7675b830bf7401b176bb65955108c3",
+        "62bbb1e0ff8c712175f82f5500441692ca841f24d01a6d9a4044684d29b9150c",
+        "a0b6fe5baf4db793ab9e3f55fbfdb05005821824164cc20c2a03061fbe069b49"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    }
+  },
+  "addendum_changes": [
+    "Addendum reconciliation applied"
+  ],
+  "validation": {
+    "passed": 14,
+    "failed": 0,
+    "not_found": 6
+  }
+}

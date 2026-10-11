@@ -1,0 +1,185 @@
+{
+  "bid_id": "Addendum",
+  "fields": {
+    "Bid Number": {
+      "value": "Page 1 | 5\nADDENDUM No. 1\nRFP JA-207652 Student and Staff Computing Devices\nThe Purpose of this Addendum is to provide responses to the vendors’ questions related to this RFP.\n1. The Display monitor – non-Touch you are asking for 3.1 USB port. Are you ok with 3.0 or do you\nneed 3.1?\nAnswer: USB 3.1 ",
+      "sources": [
+        "4d9100c7d5945b62b36d01dff7f3915ae732ebbadace7d1e751a3b887d8f507c",
+        "8054aafd3635f8a2ddb579810614c7827ac7bcb84781d88300ef9e0d5779c744",
+        "7a138247b52bb5b11f593bb896d7feaea1b168f629ca96936a632e8fcdaac241"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Title": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Due Date": {
+      "value": "from Dallas is without Accidental Damage Protection. When DISD\ndoes have this type of damage, does Dallas choose to replace those units with new orders, new\npurchase order?\nAnswer: Dallas ISD will not ask for Accidental Damage Protection for purchased devices.\n10. Reference Page 36: The column says ",
+      "sources": [
+        "b09e65fac7e5c3d94baa5ccc47ccbcdf73db8fd05f77fed20464352f81474096",
+        "8054aafd3635f8a2ddb579810614c7827ac7bcb84781d88300ef9e0d5779c744",
+        "7a138247b52bb5b11f593bb896d7feaea1b168f629ca96936a632e8fcdaac241"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Bid Submission Type": {
+      "value": "from Dallas is without Accidental Damage Protection. When DISD\ndoes have this type of damage, does Dallas choose to replace those units with new orders, new\npurchase order?\nAnswer: Dallas ISD will not ask for Accidental Damage Protection for purchased devices.\n10. Reference Page 36: The column says ",
+      "sources": [
+        "b09e65fac7e5c3d94baa5ccc47ccbcdf73db8fd05f77fed20464352f81474096",
+        "4614a215d2da87840c3bc868a712e0d0d07f4356fe29cb9aa0af5eabe5d4370d"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Term of Bid": {
+      "value": "3/40: All deliveries and deployments must incorporate white glove services,\nwhich include asset decaling, asset reporting, etching, and delivery to varied locations.\nDoes Dallas ISD require a laser etch on the stand-alone monitors or AIO computers? If yes, what\nis the location and size of the etch?\n",
+      "sources": [
+        "64932a96e57c09c4177d7f3ce697fa8d7a446eec7e846c8a5274f1dd819ab628",
+        "6ad730dd913944b28aba265f5d47790b96b33d51143decfa922a64a3781dfc1a",
+        "2939585c4a2f04df993a835a448dfd48ef11a1de978a497806062420c01419ac"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Pre Bid Meeting": {
+      "value": "Page 1 | 5\nADDENDUM No. 1\nRFP JA-207652 Student and Staff Computing Devices\nThe Purpose of this Addendum is to provide responses to the vendors’ questions related to this RFP.\n1. The Display monitor – non-Touch you are asking for 3.1 USB port. Are you ok with 3.0 or do you\nneed 3.1?\nAnswer: USB 3.1 ",
+      "sources": [
+        "4d9100c7d5945b62b36d01dff7f3915ae732ebbadace7d1e751a3b887d8f507c",
+        "7a138247b52bb5b11f593bb896d7feaea1b168f629ca96936a632e8fcdaac241"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Installation": {
+      "value": "Page 1 | 5\nADDENDUM No. 1\nRFP JA-207652 Student and Staff Computing Devices\nThe Purpose of this Addendum is to provide responses to the vendors’ questions related to this RFP.\n1. The Display monitor – non-Touch you are asking for 3.1 USB port. Are you ok with 3.0 or do you\nneed 3.1?\nAnswer: USB 3.1 ",
+      "sources": [
+        "4d9100c7d5945b62b36d01dff7f3915ae732ebbadace7d1e751a3b887d8f507c",
+        "64932a96e57c09c4177d7f3ce697fa8d7a446eec7e846c8a5274f1dd819ab628",
+        "2939585c4a2f04df993a835a448dfd48ef11a1de978a497806062420c01419ac"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Bid Bond Requirement": {
+      "value": "Page 1 | 5\nADDENDUM No. 1\nRFP JA-207652 Student and Staff Computing Devices\nThe Purpose of this Addendum is to provide responses to the vendors’ questions related to this RFP.\n1. The Display monitor – non-Touch you are asking for 3.1 USB port. Are you ok with 3.0 or do you\nneed 3.1?\nAnswer: USB 3.1 ",
+      "sources": [
+        "4d9100c7d5945b62b36d01dff7f3915ae732ebbadace7d1e751a3b887d8f507c",
+        "55155ead273dc886e4d0231a9066e04e1ae00362d853a0725f0c15619e7896b7"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Delivery Date": {
+      "value": "Page 1 | 5\nADDENDUM No. 1\nRFP JA-207652 Student and Staff Computing Devices\nThe Purpose of this Addendum is to provide responses to the vendors’ questions related to this RFP.\n1. The Display monitor – non-Touch you are asking for 3.1 USB port. Are you ok with 3.0 or do you\nneed 3.1?\nAnswer: USB 3.1 ",
+      "sources": [
+        "4d9100c7d5945b62b36d01dff7f3915ae732ebbadace7d1e751a3b887d8f507c",
+        "64932a96e57c09c4177d7f3ce697fa8d7a446eec7e846c8a5274f1dd819ab628",
+        "6ad730dd913944b28aba265f5d47790b96b33d51143decfa922a64a3781dfc1a"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Payment Terms": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Additional Documentation Required": {
+      "value": "protection), Two year onsite and ADP then three-year, four year and five years.\nHow would Dallas like us to explain this point? Can Dallas put more boxes in Oracle so we can\nhave costs per option?\nAnswer: As a minimum requirement, Dallas ISD is asking for a one-year warranty for\nstudent Chromebooks ",
+      "sources": [
+        "6ad730dd913944b28aba265f5d47790b96b33d51143decfa922a64a3781dfc1a"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "MFG for Registration": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Contract or Cooperative to use": {
+      "value": "OEM repairs or will the awarded vendor be responsible for out-of-warranty\nrepairs with supported hot swaps?\nAnswer: No, hot swap is only for when warranty work will be longer than 5 business\ndays.\n19. On page 7, question #5 of the RFP, the document asks about staffing for onsite deployments.\nWill an",
+      "sources": [
+        "2939585c4a2f04df993a835a448dfd48ef11a1de978a497806062420c01419ac",
+        "55155ead273dc886e4d0231a9066e04e1ae00362d853a0725f0c15619e7896b7"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Model_no": {
+      "value": "from Dallas is without Accidental Damage Protection. When DISD\ndoes have this type of damage, does Dallas choose to replace those units with new orders, new\npurchase order?\nAnswer: Dallas ISD will not ask for Accidental Damage Protection for purchased devices.\n10. Reference Page 36: The column says ",
+      "sources": [
+        "b09e65fac7e5c3d94baa5ccc47ccbcdf73db8fd05f77fed20464352f81474096"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Part_no": {
+      "value": "Page 2 | 5\nADDENDUM No. 1\nRFP JA-207652 Student and Staff Computing Devices\n12. References are particularly important to our company as well as DISD. Can you please share the\ntimeline DISD purchasing/M/WBE team will be reaching out to our references so we can remind\nthem to be on the lookout during ",
+      "sources": [
+        "8054aafd3635f8a2ddb579810614c7827ac7bcb84781d88300ef9e0d5779c744",
+        "2939585c4a2f04df993a835a448dfd48ef11a1de978a497806062420c01419ac"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Product": {
+      "value": "3/40: All deliveries and deployments must incorporate white glove services,\nwhich include asset decaling, asset reporting, etching, and delivery to varied locations.\nDoes Dallas ISD require a laser etch on the stand-alone monitors or AIO computers? If yes, what\nis the location and size of the etch?\n",
+      "sources": [
+        "64932a96e57c09c4177d7f3ce697fa8d7a446eec7e846c8a5274f1dd819ab628",
+        "6ad730dd913944b28aba265f5d47790b96b33d51143decfa922a64a3781dfc1a"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "contact_info": {
+      "value": "Page 2 | 5\nADDENDUM No. 1\nRFP JA-207652 Student and Staff Computing Devices\n12. References are particularly important to our company as well as DISD. Can you please share the\ntimeline DISD purchasing/M/WBE team will be reaching out to our references so we can remind\nthem to be on the lookout during ",
+      "sources": [
+        "8054aafd3635f8a2ddb579810614c7827ac7bcb84781d88300ef9e0d5779c744"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "company_name": {
+      "value": "3/40: All deliveries and deployments must incorporate white glove services,\nwhich include asset decaling, asset reporting, etching, and delivery to varied locations.\nDoes Dallas ISD require a laser etch on the stand-alone monitors or AIO computers? If yes, what\nis the location and size of the etch?\n",
+      "sources": [
+        "64932a96e57c09c4177d7f3ce697fa8d7a446eec7e846c8a5274f1dd819ab628",
+        "6ad730dd913944b28aba265f5d47790b96b33d51143decfa922a64a3781dfc1a",
+        "8054aafd3635f8a2ddb579810614c7827ac7bcb84781d88300ef9e0d5779c744"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    },
+    "Bid Summary": {
+      "value": null,
+      "sources": [],
+      "confidence": 0.0,
+      "notes": "Not found in documents"
+    },
+    "Product Specification": {
+      "value": "Page 1 | 5\nADDENDUM No. 1\nRFP JA-207652 Student and Staff Computing Devices\nThe Purpose of this Addendum is to provide responses to the vendors’ questions related to this RFP.\n1. The Display monitor – non-Touch you are asking for 3.1 USB port. Are you ok with 3.0 or do you\nneed 3.1?\nAnswer: USB 3.1 ",
+      "sources": [
+        "4d9100c7d5945b62b36d01dff7f3915ae732ebbadace7d1e751a3b887d8f507c",
+        "64932a96e57c09c4177d7f3ce697fa8d7a446eec7e846c8a5274f1dd819ab628",
+        "6ad730dd913944b28aba265f5d47790b96b33d51143decfa922a64a3781dfc1a"
+      ],
+      "confidence": 0.85,
+      "notes": "Extracted from retrieved evidence with keyword match"
+    }
+  },
+  "addendum_changes": [
+    "Addendum reconciliation applied"
+  ],
+  "validation": {
+    "passed": 16,
+    "failed": 0,
+    "not_found": 4
+  }
+}

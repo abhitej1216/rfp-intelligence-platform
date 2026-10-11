@@ -1,0 +1,93 @@
+
+[
+  {
+    "id": "E01",
+    "query": "What is the final submission deadline for the Dallas student and staff computing devices RFP?",
+    "source": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+    "evidence_terms": ["July 9, 2024", "2:00 PM"]
+  },
+  {
+    "id": "E02",
+    "query": "What is the initial contract term for the Dallas computing devices procurement?",
+    "source": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+    "evidence_terms": ["Initial Term: 3"]
+  },
+  {
+    "id": "E03",
+    "query": "When is the Dallas pre-proposal meeting scheduled?",
+    "source": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+    "evidence_terms": ["Pre-Proposal Meeting", "10-JUN-2024"]
+  },
+  {
+    "id": "E04",
+    "query": "How must proposals be submitted for the Dallas computing devices RFP?",
+    "source": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+    "evidence_terms": ["iSupplier"]
+  },
+  {
+    "id": "E05",
+    "query": "What management enrollment is required for Chromebooks in the Dallas RFP?",
+    "source": "Addendum 1 RFP JA-207652 Student and Staff Computing Devices.pdf",
+    "evidence_terms": ["Google Management"]
+  },
+  {
+    "id": "E06",
+    "query": "What minimum warranty applies to Dallas staff laptops?",
+    "source": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+    "evidence_terms": ["Warranty: 3-year minimum"]
+  },
+  {
+    "id": "E07",
+    "query": "How quickly does Dallas ISD expect repairs or replacements to be performed?",
+    "source": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+    "evidence_terms": ["five (5) business days"]
+  },
+  {
+    "id": "E08",
+    "query": "What is the Maryland Dell laptop PORFP number?",
+    "source": "PORFP_-_Dell_Laptop_Final.pdf",
+    "evidence_terms": ["E20P4600040"]
+  },
+  {
+    "id": "E09",
+    "query": "What is the eMMA project number for the Maryland Dell laptop procurement?",
+    "source": "PORFP_-_Dell_Laptop_Final.pdf",
+    "evidence_terms": ["BPM044557"]
+  },
+  {
+    "id": "E10",
+    "query": "Which Dell Latitude laptop model is requested in the Maryland PORFP?",
+    "source": "PORFP_-_Dell_Laptop_Final.pdf",
+    "evidence_terms": ["Dell Latitude 5550"]
+  },
+  {
+    "id": "E11",
+    "query": "What is the model number of the requested Dell Thunderbolt dock?",
+    "source": "PORFP_-_Dell_Laptop_Final.pdf",
+    "evidence_terms": ["WD22TB4"]
+  },
+  {
+    "id": "E12",
+    "query": "How long is the required Dell hardware warranty?",
+    "source": "PORFP_-_Dell_Laptop_Final.pdf",
+    "evidence_terms": ["Dell Limited Hardware Warranty", "3 Years"]
+  },
+  {
+    "id": "E13",
+    "query": "What is the required delivery window after award for the Maryland laptops?",
+    "source": "PORFP_-_Dell_Laptop_Final.pdf",
+    "evidence_terms": ["within 45 days"]
+  },
+  {
+    "id": "E14",
+    "query": "When must invoices be submitted after delivery under the Maryland PORFP?",
+    "source": "PORFP_-_Dell_Laptop_Final.pdf",
+    "evidence_terms": ["within 10 days of delivery"]
+  },
+  {
+    "id": "E15",
+    "query": "What special readiness requirement applies to the Maryland Dell laptops?",
+    "source": "PORFP_-_Dell_Laptop_Final.pdf",
+    "evidence_terms": ["Microsoft Copilot ready"]
+  }
+]
