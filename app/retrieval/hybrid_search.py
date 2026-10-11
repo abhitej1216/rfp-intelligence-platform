@@ -4,7 +4,10 @@ from __future__ import annotations
 from typing import Any
 
 from app.retrieval.bm25_store import BM25Store
-from app.retrieval.vector_store import VectorStore
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from app.retrieval.vector_store import VectorStore
 
 DEFAULT_RRF_K = 60
 
@@ -89,12 +92,12 @@ class HybridSearch:
         vector_results = self.vector_store.search(
             query,
             top_k=candidate_k,
-            filters=filters,
+            **({"filters": filters} if filters is not None else {}),
         )
         bm25_results = self.bm25_store.search(
             query,
             top_k=candidate_k,
-            filters=filters,
+            **({"filters": filters} if filters is not None else {}),
         )
 
         for result in vector_results:

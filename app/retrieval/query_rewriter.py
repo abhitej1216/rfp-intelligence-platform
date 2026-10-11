@@ -9,7 +9,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 class QueryRewriter:
     def __init__(self, api_key: str | None = None):
         self.api_key = api_key or os.getenv("GEMINI_API_KEY")
-        self.llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=self.api_key) if self.api_key else None
+        model_name = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
+        self.llm = ChatGoogleGenerativeAI(model=model_name, api_key=self.api_key) if self.api_key else None
 
     def rewrite(self, query: str) -> str:
         if not self.llm:

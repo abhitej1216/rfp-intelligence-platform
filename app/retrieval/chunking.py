@@ -71,6 +71,20 @@ def _document_segments(document: DocumentRecord) -> list[TextSegment]:
     return []
 
 
+def _infer_bid_identifier(document: DocumentRecord) -> str | None:
+    """Infer the explicit procurement ID from document headings or filename."""
+    from app.ingestion.addenda import extract_explicit_bid_identifiers
+
+    candidates = extract_explicit_bid_identifiers(document.text)
+    if len(candidates) == 1:
+        return next(iter(candidates))
+
+    filename_candidates = extract_explicit_bid_identifiers(document.source_filename)
+    if len(filename_candidates) == 1:
+        return next(iter(filename_candidates))
+    return None
+
+
 def chunk_document(
     document: DocumentRecord,
     *,
@@ -92,6 +106,7 @@ def chunk_document(
     )
 
     relationship = document.addendum_relationship
+    bid_identifier = relationship.bid_identifier or _infer_bid_identifier(document)
     chunks: list[ChunkRecord] = []
     chunk_index = 0
 
@@ -118,12 +133,14 @@ def chunk_document(
                     source_relative_path=document.source_relative_path,
                     source_sha256=document.source_sha256,
                     source_kind=document.source_kind.value,
+                    document_type=document.document_type,
+                    addendum_number=document.addendum_number,
                     title=document.title,
                     text=piece,
                     chunk_index=chunk_index,
                     page_number=segment.page_number,
                     section_hint=segment.section_hint,
-                    bid_identifier=relationship.bid_identifier,
+                    bid_identifier=bid_identifier,
                     is_addendum=relationship.is_addendum,
                     addendum_status=relationship.status.value,
                 )

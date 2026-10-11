@@ -7,7 +7,7 @@ AI Engineering Assignment — RAG Search Engine & Multi-Agent System.
 ```cmd
 python -m venv .venv
 .venv\Scripts\activate
-pip install -r requirement.txt
+python -m pip install -r requirement.txt
 ```
 
 Create `.env` from `.env.example`:
@@ -16,10 +16,7 @@ copy .env.example .env
 ```
 
 ## Dependencies
-- fastapi, uvicorn, streamlit
-- pydantic, google-generativeai, qdrant-client
-- langgraph (optional), beautifulsoup4, pypdf
-- sentence-transformers, rank-bm25, pytest, ruff
+Install all project dependencies with `python -m pip install -r requirement.txt`. PDF text extraction uses `pypdf`; OCR can be enabled locally when the optional OCR dependencies and Tesseract are installed. Embeddings and vector indexing use Sentence Transformers and local Qdrant.
 
 ## How to Run Each Mode
 
@@ -45,20 +42,41 @@ python scripts\search_hybrid.py
 
 ### API (FastAPI)
 ```cmd
-python -m uvicorn app.api.main:app --reload
+python -m uvicorn app.api.main:app --reload --host 127.0.0.1 --port 8001
 ```
-Endpoints: `GET /health`, `POST /index`, `GET /search`, `POST /ask`
+Endpoints: `GET /health`, `POST /index`, `GET /search`, `POST /ask`, `POST /ask/stream`, `POST /extract`
 
-### Multi-Agent Extraction
+### Multi-agent extraction (API)
 ```cmd
-python scripts\agent_trace_example.py
+curl -X POST http://127.0.0.1:8001/extract -H "Content-Type: application/json" -d "{\"bid_id\": \"Bid1\"}"
 ```
+Optional body field `input_dir` runs the IngestionAgent before retrieval/extraction. The response includes the 20-field bid record, addendum changes, validation counts, and a full agent step trace.
+
+Agents: Orchestrator (master router), IngestionAgent, RetrievalAgent, ExtractionAgent, ReconciliationAgent, ValidatorAgent, QAAgent, ReportAgent.
+
+The Master Orchestrator picks agents from the query (`POST /route`, streamed on `POST /ask/stream`). Streamlit exposes each agent as its own page under **Agents**, plus the master chat under **Master Orchestrator**.
+
+When a run finishes in the UI, the final report JSON is auto-downloaded in the browser and also saved under `data/reports/`.
+
+### Streamlit Frontend
+With the API running, start the UI in another terminal:
+```cmd
+.venv\Scripts\activate
+streamlit run app\ui\streamlit_app.py
+```
+Chat-style UI streams answers from `POST /ask/stream` (bouncing loader while retrieving/generating). Health, Index, and Search tools live in the sidebar. Set the API base URL in the sidebar if needed (default `http://127.0.0.1:8001`). Gemini rephrases answers when `GEMINI_API_KEY` / `GEMINI_MODEL` are set in `.env`.
+
+### Multi-Agent Extraction (CLI trace)
+```cmd
+python scripts\agent_trace_example.py Bid1
+```
+Or use the Streamlit **Extract** page under Assistant.
 
 ### Generate Final JSON Outputs
 ```cmd
-PYTHONPATH=. python scripts\generate_outputs.py
+python scripts\generate_outputs.py
 ```
-Outputs: `data/Bid1_output.json`, `data/Bid2_output.json`
+Outputs one JSON per immediate bid subfolder in `data/`. Override the input root with a path argument, for example `python scripts\generate_outputs.py path\to\bids`.
 
 ## Design Decisions
 
@@ -76,20 +94,21 @@ Outputs: `data/Bid1_output.json`, `data/Bid2_output.json`
 - Hybrid: dense vector (Qdrant, cosine distance) + BM25 keyword (`rank-bm25`)
 - Fusion: Reciprocal Rank Fusion (`rrf_k=60`)
 - Metadata filtering: `bid_identifier`, `source_filename`, `is_addendum` supported in both indexes
-- Query rewriting: modular `QueryRewriter` using Gemini SDK with safe fallback to original query
-- Reranking: optional local cross-encoder (`cross-encoder/ms-marco-MiniLM-L-6-v2`) with graceful no-op fallback
+- Query rewriting: optional Gemini-backed query rewriter; if unavailable, the original query is retained.
+- Reranking: optional local cross-encoder (`cross-encoder/ms-marco-MiniLM-L-6-v2`) with graceful no-op fallback.
+- Provenance: results retain source filename, page, document type, addendum number, bid identifier, and text.
 
 ### Agent Framework
 - Custom lightweight orchestrator (`AgentState` Pydantic model)
 - Roles: Orchestrator, Retrieval, Extraction, Addendum Reconciliation, Validator, Q&A
 - Shared typed state: plan, evidence, draft_fields, validation_results, final_output
-- Bounded retries (`max_retries=3`) with feedback loop (validator rejects → re-extraction)
-- Structured agent traces: inputs, outputs, tool calls, latency
+- Bounded validation retries are represented in the orchestration API; extraction only accepts values with explicit citations.
+- Structured source citations include filename and page where available.
 - No full LangGraph dependency; framework-agnostic for testability
 
 ### Prompts / Extraction
 - 20-field exact schema (`app/schemas/extraction.py`)
-- Evidence-based keyword matching for extraction (`app/extraction/extractor.py`)
+- Field-specific evidence matching for the offline baseline (`app/extraction/extractor.py`); it abstains when no matching evidence is found. Treat heuristic extraction as a candidate for human review, not a verified fact.
 - Every field: value + sources + confidence + notes/reason
 - Missing fields: explicit `null` with `"Not found in documents"` — never invented
 - Addendum reconciliation: `addendum_changes` list in output; superseded facts replaced
@@ -97,8 +116,9 @@ Outputs: `data/Bid1_output.json`, `data/Bid2_output.json`
 ### Security & Privacy
 - `.env` for secrets; `.env.example` with placeholders only
 - `.gitignore` excludes `.env`, `.venv`, `__pycache__`
-- No hardcoded API keys, bid identifiers, or document paths
-- Local Qdrant persistence (`data/qdrant/`); no external upload of confidential RFPs
+- No hardcoded API keys. Gemini query rewriting is opt-in via environment configuration.
+- Local Qdrant persistence (`data/qdrant/`); embedding model download may require network access on first run.
+- Generated records and ingested text can contain confidential data; do not publish them without review.
 
 ### Baseline Metrics (Reproducible)
 | Metric | Vector | BM25 | Hybrid |
@@ -110,6 +130,6 @@ Outputs: `data/Bid1_output.json`, `data/Bid2_output.json`
 
 ### Known Limitations
 - E04 (Dallas RFP submission instructions) ranks poorly in baseline; query rewriting improves it but is optional
-- Extraction uses evidence keyword matching; full LLM-based field extraction requires Gemini API activation
+- Extraction is a conservative heuristic baseline, not a substitute for bid specialist review. Optional LLM calls should not be used for sensitive bid data without an approved provider/privacy review.
 - Streamlit UI is minimal; full interactive dashboard is a future enhancement
 - Docker and CI pipeline are optional and not included

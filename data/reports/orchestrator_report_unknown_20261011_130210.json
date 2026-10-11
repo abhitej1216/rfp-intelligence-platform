@@ -1,0 +1,518 @@
+{
+  "mode": "extract",
+  "bid_id": "unknown",
+  "record": {
+    "bid_id": "unknown",
+    "fields": {
+      "Bid Number": {
+        "value": null,
+        "sources": [],
+        "confidence": 0.0,
+        "notes": "Not found in retrieved evidence"
+      },
+      "Title": {
+        "value": "RFP JA-207652 Student and Staff Computing Devices",
+        "sources": [
+          {
+            "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+            "page": 1,
+            "chunk_id": "40a77352247e25e078779ba4bfd244e01b0dca64fe09e827003634aea69b49c3"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 2,
+            "chunk_id": "e4815353eebab2285c8d76dd8a152e2ede6c88288af98743d45b908bb7ba62f0"
+          },
+          {
+            "file": "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html",
+            "page": null,
+            "chunk_id": "31c436ba198dcd4813cbf2a7320224ef5e043cb7e2a33dcb80da033bb0077e7b"
+          }
+        ],
+        "confidence": 0.74,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Due Date": {
+        "value": "The Purpose of this Addendum is to extend the due date of this RFP.",
+        "sources": [
+          {
+            "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+            "page": 1,
+            "chunk_id": "40a77352247e25e078779ba4bfd244e01b0dca64fe09e827003634aea69b49c3"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 2,
+            "chunk_id": "e4815353eebab2285c8d76dd8a152e2ede6c88288af98743d45b908bb7ba62f0"
+          },
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 1,
+            "chunk_id": "690fe7f56379dcd91074f0884b5404c751276a8c98d563d96906873d602b56cf"
+          }
+        ],
+        "confidence": 0.74,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Bid Submission Type": {
+        "value": "Please sign this addendum and submit along with your copies of the proposal. ALL OTHER PROVISIONS",
+        "sources": [
+          {
+            "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+            "page": 1,
+            "chunk_id": "40a77352247e25e078779ba4bfd244e01b0dca64fe09e827003634aea69b49c3"
+          }
+        ],
+        "confidence": 0.58,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Term of Bid": {
+        "value": "student Chromebooks and three years for student and staff Windows laptops. The",
+        "sources": [
+          {
+            "file": "Addendum 1 RFP JA-207652 Student and Staff Computing Devices.pdf",
+            "page": 1,
+            "chunk_id": "6ad730dd913944b28aba265f5d47790b96b33d51143decfa922a64a3781dfc1a"
+          }
+        ],
+        "confidence": 0.58,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Pre Bid Meeting": {
+        "value": "Pre-Proposal Meeting 10-JUN-2024 14:00:00",
+        "sources": [
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 2,
+            "chunk_id": "e4815353eebab2285c8d76dd8a152e2ede6c88288af98743d45b908bb7ba62f0"
+          }
+        ],
+        "confidence": 0.58,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Installation": {
+        "value": "services include (a) software installation, (b) asset tagging and etching, (c) device deployment and setup",
+        "sources": [
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 7,
+            "chunk_id": "cdc89efe1493f7ecf75ec6dce79d6eca88600484e8751cdf8068097ab028233a"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 3,
+            "chunk_id": "de32165eb2324aaa5182c9af82d63bb69b95cc869d812938220b8b9190c5b549"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 38,
+            "chunk_id": "7386f7df44e49fa4f3ad4f1f5ee57a546f10c2c52977458b6e116578a32eefcb"
+          }
+        ],
+        "confidence": 0.74,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Bid Bond Requirement": {
+        "value": "insurance, bid bond, or liability requirements of the District as noted elsewhere in this solicitation document.",
+        "sources": [
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 9,
+            "chunk_id": "907be9b24d470ff4975d30098b955acbce1c4db2aaf3cce31fa671779579a883"
+          }
+        ],
+        "confidence": 0.58,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Delivery Date": {
+        "value": "9. Delivery within 45 days of Award.",
+        "sources": [
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 2,
+            "chunk_id": "50e78568681c3abca1248fbaf0bb3d6503727bf08799dc65235adfc04c70b09a"
+          }
+        ],
+        "confidence": 0.58,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Payment Terms": {
+        "value": "changes to M/WBE subcontractors, adhering to the M/WBE commitment and subcontractor payment terms",
+        "sources": [
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 31,
+            "chunk_id": "6544265f858c94aef9f885f13a50844acd6cc0cf0d2cc3470ffb069124fd30ff"
+          },
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 2,
+            "chunk_id": "50e78568681c3abca1248fbaf0bb3d6503727bf08799dc65235adfc04c70b09a"
+          }
+        ],
+        "confidence": 0.6599999999999999,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Additional Documentation Required": {
+        "value": "(LOA) from the Manufacturer or Distributor.; INSURANCE AND/OR BONDS; Insurance and/or bond requirements are enumerated elsewhere in Contract documents. Submission of a; The state reserves the right to request a Letter of Authorization; certificate of insurance/bond by the undersigned (or an agent/broker on behalf of the undersigned); certificate of insurance/bond. The certificate of insurance/bond must accurately reflect the policy coverages; insurance, bid bond, or liability requirements of the District as noted elsewhere in this solicitation document.; represents that the coverages and perils covered by the insurance/bond meet or exceed the requirements of",
+        "sources": [
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 2,
+            "chunk_id": "05c949114e74f7eb647c777074332c7d99e514025ace2bd02bc60be2e43c4912"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 9,
+            "chunk_id": "907be9b24d470ff4975d30098b955acbce1c4db2aaf3cce31fa671779579a883"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 17,
+            "chunk_id": "907f884c28ab616416efaa961ff3d0c23d279e81cda6875a1b8ebed6c2ed687b"
+          }
+        ],
+        "confidence": 0.74,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "MFG for Registration": {
+        "value": "FA V (Manufacturer’s Extended Warranty)",
+        "sources": [
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 1,
+            "chunk_id": "690fe7f56379dcd91074f0884b5404c751276a8c98d563d96906873d602b56cf"
+          }
+        ],
+        "confidence": 0.58,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Contract or Cooperative to use": {
+        "value": "Hardware Master Contract",
+        "sources": [
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 1,
+            "chunk_id": "690fe7f56379dcd91074f0884b5404c751276a8c98d563d96906873d602b56cf"
+          }
+        ],
+        "confidence": 0.58,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Model_no": {
+        "value": "BPM044557, MD529, CC7802, Latitude 5550, WD22TB4",
+        "sources": [
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 1,
+            "chunk_id": "690fe7f56379dcd91074f0884b5404c751276a8c98d563d96906873d602b56cf"
+          },
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 3,
+            "chunk_id": "8a318f1cdbaf16aa8bb7e9c47d81146b90bd076d76020c95f5684fb99099e5de"
+          }
+        ],
+        "confidence": 0.6599999999999999,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Part_no": {
+        "value": null,
+        "sources": [],
+        "confidence": 0.0,
+        "notes": "Not found in retrieved evidence"
+      },
+      "Product": {
+        "value": "Desktop, Laptop and Tablet 2015 Master Contract",
+        "sources": [
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 1,
+            "chunk_id": "690fe7f56379dcd91074f0884b5404c751276a8c98d563d96906873d602b56cf"
+          },
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 2,
+            "chunk_id": "05c949114e74f7eb647c777074332c7d99e514025ace2bd02bc60be2e43c4912"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 31,
+            "chunk_id": "6544265f858c94aef9f885f13a50844acd6cc0cf0d2cc3470ffb069124fd30ff"
+          }
+        ],
+        "confidence": 0.74,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "contact_info": {
+        "value": "Email Address",
+        "sources": [
+          {
+            "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+            "page": 1,
+            "chunk_id": "40a77352247e25e078779ba4bfd244e01b0dca64fe09e827003634aea69b49c3"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 2,
+            "chunk_id": "e4815353eebab2285c8d76dd8a152e2ede6c88288af98743d45b908bb7ba62f0"
+          },
+          {
+            "file": "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html",
+            "page": null,
+            "chunk_id": "31c436ba198dcd4813cbf2a7320224ef5e043cb7e2a33dcb80da033bb0077e7b"
+          }
+        ],
+        "confidence": 0.74,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "company_name": {
+        "value": "Box 2: Please enter Dallas ISD",
+        "sources": [
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 14,
+            "chunk_id": "6a71021cff0388d1d4ae03103e64b5151cdd2aa98fba7c313cbb1f62a3e8868e"
+          },
+          {
+            "file": "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html",
+            "page": null,
+            "chunk_id": "31c436ba198dcd4813cbf2a7320224ef5e043cb7e2a33dcb80da033bb0077e7b"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 9,
+            "chunk_id": "5987ef0234a2084f136042d203b9d0d58989015c911352ffcdabc2bd6ab8020c"
+          }
+        ],
+        "confidence": 0.74,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Bid Summary": {
+        "value": "The information in this Addendum is hereby incorporated and made part of any contract awarded Anticipated Approval/Award 22-AUG-2024 18:00:00 the contract name as a description of goods or services.",
+        "sources": [
+          {
+            "file": "Addendum 2 RFP JA-207652 Student and Staff Computing Devices.pdf",
+            "page": 1,
+            "chunk_id": "40a77352247e25e078779ba4bfd244e01b0dca64fe09e827003634aea69b49c3"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 2,
+            "chunk_id": "e4815353eebab2285c8d76dd8a152e2ede6c88288af98743d45b908bb7ba62f0"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 14,
+            "chunk_id": "6a71021cff0388d1d4ae03103e64b5151cdd2aa98fba7c313cbb1f62a3e8868e"
+          },
+          {
+            "file": "Student and Staff Computing Devices __SOURCING #168884__ - Bid Information - {3} _ BidNet Direct.html",
+            "page": null,
+            "chunk_id": "31c436ba198dcd4813cbf2a7320224ef5e043cb7e2a33dcb80da033bb0077e7b"
+          }
+        ],
+        "confidence": 0.82,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      },
+      "Product Specification": {
+        "value": "FA V (Manufacturer’s Extended Warranty)",
+        "sources": [
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 1,
+            "chunk_id": "690fe7f56379dcd91074f0884b5404c751276a8c98d563d96906873d602b56cf"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 31,
+            "chunk_id": "6544265f858c94aef9f885f13a50844acd6cc0cf0d2cc3470ffb069124fd30ff"
+          },
+          {
+            "file": "JA-207652 Student and Staff Computing Devices FINAL.pdf",
+            "page": 7,
+            "chunk_id": "cdc89efe1493f7ecf75ec6dce79d6eca88600484e8751cdf8068097ab028233a"
+          },
+          {
+            "file": "PORFP_-_Dell_Laptop_Final.pdf",
+            "page": 3,
+            "chunk_id": "8a318f1cdbaf16aa8bb7e9c47d81146b90bd076d76020c95f5684fb99099e5de"
+          }
+        ],
+        "confidence": 0.82,
+        "notes": "Matched field-specific evidence; verify the cited passage"
+      }
+    },
+    "addendum_changes": [],
+    "validation": {
+      "passed": 18,
+      "failed": 0,
+      "not_found": 2
+    }
+  },
+  "plan": [
+    "retrieval",
+    "extraction",
+    "reconciliation",
+    "validator",
+    "report"
+  ],
+  "steps": [
+    {
+      "agent": "Orchestrator",
+      "action": "route",
+      "status": "ok",
+      "detail": {
+        "mode": "extract",
+        "selected_agents": [
+          "retrieval",
+          "extraction",
+          "reconciliation",
+          "validator",
+          "report"
+        ],
+        "reasons": [
+          "Full extraction / final bid report requested",
+          "Full extraction / final bid report requested",
+          "Full extraction / final bid report requested",
+          "Full extraction / final bid report requested",
+          "Full extraction / final bid report requested"
+        ],
+        "goal": "Produce the final report and bid summary export"
+      }
+    },
+    {
+      "agent": "RetrievalAgent",
+      "action": "retrieve",
+      "status": "ok",
+      "detail": {
+        "queries": 4,
+        "evidence_added": 34,
+        "evidence_total": 34,
+        "bid_id": null
+      }
+    },
+    {
+      "agent": "ExtractionAgent",
+      "action": "extract",
+      "status": "ok",
+      "detail": {
+        "fields": 20
+      }
+    },
+    {
+      "agent": "ReconciliationAgent",
+      "action": "reconcile",
+      "status": "ok",
+      "detail": {
+        "changes": 2
+      }
+    },
+    {
+      "agent": "ExtractionAgent",
+      "action": "extract",
+      "status": "ok",
+      "detail": {
+        "fields": 20
+      }
+    },
+    {
+      "agent": "ValidatorAgent",
+      "action": "validate",
+      "status": "ok",
+      "detail": {
+        "validation": {
+          "passed": 18,
+          "failed": 0,
+          "not_found": 2
+        },
+        "rejected_fields": []
+      }
+    },
+    {
+      "agent": "ReportAgent",
+      "action": "report_extraction",
+      "status": "ok",
+      "detail": {
+        "bid_id": null,
+        "fields": 20,
+        "validation": {
+          "passed": 18,
+          "failed": 0,
+          "not_found": 2
+        }
+      }
+    }
+  ],
+  "retries": 0,
+  "validation": {
+    "passed": 18,
+    "failed": 0,
+    "not_found": 2
+  },
+  "addendum_changes": [],
+  "route": {
+    "goal": "Produce the final report and bid summary export",
+    "mode": "extract",
+    "selected_agent_ids": [
+      "retrieval",
+      "extraction",
+      "reconciliation",
+      "validator",
+      "report"
+    ],
+    "selected_agents": [
+      {
+        "id": "retrieval",
+        "name": "RetrievalAgent",
+        "title": "Retrieval / Search Agent",
+        "responsibility": "Rewrites and expands queries, calls the search engine, applies metadata filters and reranking, returns evidence with citations.",
+        "output": "Ranked evidence passages"
+      },
+      {
+        "id": "extraction",
+        "name": "ExtractionAgent",
+        "title": "Extraction Agent",
+        "responsibility": "Fills the structured fields using only retrieved evidence. May cover dates & logistics, commercial & legal, and product & specs.",
+        "output": "Field values + source citations"
+      },
+      {
+        "id": "reconciliation",
+        "name": "ReconciliationAgent",
+        "title": "Addendum Reconciliation Agent",
+        "responsibility": "Compares the base RFP with its addendums and applies the latest valid change to each field (e.g. extended due date).",
+        "output": "Change log + updated fields"
+      },
+      {
+        "id": "validator",
+        "name": "ValidatorAgent",
+        "title": "Validator / Critic Agent",
+        "responsibility": "Checks each field for evidence support, format (dates, numbers), consistency and hallucination. Sends failed fields back for re-extraction.",
+        "output": "Validation report, confidence scores"
+      },
+      {
+        "id": "report",
+        "name": "ReportAgent",
+        "title": "Report Agent",
+        "responsibility": "Produces the final JSON bid record and/or a human-readable summary from validated agent outputs.",
+        "output": "Answer with citations, JSON output"
+      }
+    ],
+    "reasons": [
+      "Full extraction / final bid report requested",
+      "Full extraction / final bid report requested",
+      "Full extraction / final bid report requested",
+      "Full extraction / final bid report requested",
+      "Full extraction / final bid report requested"
+    ],
+    "orchestrator": {
+      "id": "orchestrator",
+      "name": "Orchestrator",
+      "class_name": "Orchestrator",
+      "title": "Orchestrator / Planner",
+      "responsibility": "Receives the user goal (\"extract bid\" or a question), breaks it into sub-tasks, routes them to the right agents, and decides when the job is done.",
+      "output": "Execution plan, final response",
+      "keywords": []
+    }
+  }
+}

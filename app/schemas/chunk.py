@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 from typing import Literal
@@ -17,6 +16,8 @@ class ChunkRecord(BaseModel):
     source_relative_path: str
     source_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
     source_kind: Literal["pdf", "html"]
+    document_type: str = "rfp"
+    addendum_number: int | None = Field(default=None, ge=1)
     title: str | None = None
     text: str = Field(min_length=1)
     chunk_index: int = Field(ge=0)
@@ -24,6 +25,4 @@ class ChunkRecord(BaseModel):
     section_hint: str | None = None
     bid_identifier: str | None = None
     is_addendum: bool
-    addendum_status: Literal[
-        "linked", "unresolved", "not_an_addendum"
-    ]
+    addendum_status: Literal["linked", "unresolved", "not_an_addendum"]

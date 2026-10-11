@@ -1,93 +1,118 @@
 from __future__ import annotations
 
-import os
+import re
+from collections import defaultdict
+from typing import Any
 
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAI
+from app.schemas.extraction import BidField, BidRecord, SourceCitation
 
-from app.schemas.extraction import BidField, BidRecord
+FIELDS = (
+    "Bid Number", "Title", "Due Date", "Bid Submission Type", "Term of Bid",
+    "Pre Bid Meeting", "Installation", "Bid Bond Requirement", "Delivery Date",
+    "Payment Terms", "Additional Documentation Required", "MFG for Registration",
+    "Contract or Cooperative to use", "Model_no", "Part_no", "Product",
+    "contact_info", "company_name", "Bid Summary", "Product Specification",
+)
+
+# Match relevant evidence, not every chunk containing an overly broad keyword.
+FIELD_PATTERNS = {
+    "Bid Number": (r"\b(?:solicitation|rfp|rfq|porfp)\s*(?:number|no\.?|#)?\s*[:#-]?\s*[A-Z0-9][A-Z0-9-]{3,}",),
+    "Title": (r"(?im)^.{0,30}(?:request for proposals?|invitation to bid|student and staff computing devices|dell laptops?).{0,160}$",),
+    "Due Date": (r"(?i).{0,100}(?:new due date|solicitation due|proposal due|submission deadline|due date).{0,180}",),
+    "Bid Submission Type": (r"(?i).{0,120}(?:submit|submission|iSupplier|sealed (?:bid|proposal)|eMMA portal).{0,180}",),
+    "Term of Bid": (r"(?i).{0,100}(?:initial term|contract term|renewal option|three years|one-year renewal).{0,180}",),
+    "Pre Bid Meeting": (r"(?i).{0,100}(?:pre[- ](?:proposal|bid) meeting|mandatory meeting).{0,180}",),
+    "Installation": (r"(?i).{0,100}(?:installation|deployment|imaging|white glove).{0,180}",),
+    "Bid Bond Requirement": (r"(?i).{0,100}(?:bid bond|bid security|proposal security).{0,180}",),
+    "Delivery Date": (r"(?i).{0,100}(?:delivery within|delivery .*days|within \d+ days of award|delivery deadline).{0,180}",),
+    "Payment Terms": (r"(?i).{0,100}(?:invoice|invoicing|payment terms|net \d+|within \d+ days of delivering).{0,180}",),
+    "Additional Documentation Required": (r"(?i).{0,100}(?:affidavit|certificate|insurance|w-9|letter of authorization|loa).{0,180}",),
+    "MFG for Registration": (r"(?i).{0,100}(?:manufacturer|master contractor|authorized reseller|letter of authorization).{0,180}",),
+    "Contract or Cooperative to use": (r"(?i).{0,100}(?:cooperative|master contract|contract vehicle|state contract).{0,180}",),
+    "Model_no": (r"\b(?:Latitude\s*\d{4}|WD\d{2}TB\d|[A-Z]{2,}\d{2,}[A-Z0-9-]*)\b",),
+    "Part_no": (r"(?i).{0,50}\b(?:sku|part\s*(?:number|no\.?))\b.{0,100}",),
+    "Product": (r"(?i).{0,120}(?:qty|quantity|laptops?|dock|chromebook|desktop|monitor).{0,120}",),
+    "contact_info": (r"(?i).{0,100}(?:contact|email|phone|buyer|procurement officer).{0,180}",),
+    "company_name": (r"(?i).{0,100}(?:Dallas ISD|Dallas Independent School District|Maryland Department|Department of [A-Z][A-Za-z ]+).{0,100}",),
+    "Product Specification": (r"(?i).{0,100}(?:processor|CPU|RAM|memory|SSD|storage|display|warranty|Latitude|WD22TB4).{0,180}",),
+}
 
 
-class GeminiExtractor:
-    def __init__(self):
-        api_key = os.getenv("GEMINI_API_KEY")
-        self.llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=api_key) if api_key else None
+def _evidence_records(evidence: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    normalized = []
+    for item in evidence:
+        metadata = item.get("metadata") or {}
+        normalized.append({
+            "text": str(item.get("text", "")),
+            "file": metadata.get("source_filename") or item.get("source_filename") or "Unknown source",
+            "page": metadata.get("page_number") or item.get("page_number"),
+            "chunk_id": item.get("chunk_id"),
+        })
+    return normalized
 
-    def extract(self, bid_id: str, evidence_text: str) -> BidRecord:
-        fields = {}
-        field_names = [
-            "Bid Number", "Title", "Due Date", "Bid Submission Type",
-            "Term of Bid", "Pre Bid Meeting", "Installation",
-            "Bid Bond Requirement", "Delivery Date", "Payment Terms",
-            "Additional Documentation Required", "MFG for Registration",
-            "Contract or Cooperative to use", "Model_no", "Part_no",
-            "Product", "contact_info", "company_name", "Bid Summary",
-            "Product Specification",
-        ]
-        for name in field_names:
-            value = None
-            sources = []
-            notes = "Not found in documents"
-            confidence = 0.0
-            if self.llm:
-                try:
-                    prompt = ChatPromptTemplate.from_template(
-                        "Extract the value for '{field}' from the following bid document text. "
-                        "If not found, return null. Provide sources (file/page references) and confidence (0-1).\n"
-                        "Text: {text}\nField: {field}\nOutput JSON with value, sources, confidence, notes."
-                    )
-                    chain = prompt | self.llm
-                    result = chain.invoke({"field": name, "text": evidence_text[:4000]})
-                    content = result.content if hasattr(result, "content") else str(result)
-                    # Parse JSON from content
-                    import json
-                    parsed = json.loads(content) if content.startswith("{") else {"value": None, "sources": [], "confidence": 0.0, "notes": "Not found in documents"}
-                    value = parsed.get("value")
-                    sources = parsed.get("sources", [])
-                    confidence = parsed.get("confidence", 0.0)
-                    notes = parsed.get("notes", "Not found in documents")
-                except Exception:  # noqa: BLE001 - safe LLM fallback
-                    value = None
-                    sources = []
-                    confidence = 0.0
-                    notes = "LLM extraction failed; not found in documents"
-            else:
-                # Fallback to keyword matching if no API key
-                keywords = {
-                    "Bid Number": ["bid", "solicitation"],
-                    "Title": ["title"],
-                    "Due Date": ["due", "deadline"],
-                    "Bid Submission Type": ["submission"],
-                    "Term of Bid": ["term", "duration"],
-                    "Pre Bid Meeting": ["pre-bid", "meeting"],
-                    "Installation": ["installation"],
-                    "Bid Bond Requirement": ["bond", "security"],
-                    "Delivery Date": ["delivery"],
-                    "Payment Terms": ["payment", "net"],
-                    "Additional Documentation Required": ["affidavit", "certificate"],
-                    "MFG for Registration": ["manufacturer", "registration"],
-                    "Contract or Cooperative to use": ["contract", "cooperative"],
-                    "Model_no": ["model"],
-                    "Part_no": ["part", "sku"],
-                    "Product": ["product", "laptop"],
-                    "contact_info": ["contact", "email"],
-                    "company_name": ["company", "agency"],
-                    "Bid Summary": ["summary"],
-                    "Product Specification": ["specification", "cpu", "ram"],
-                }.get(name, [])
-                if any(kw in evidence_text.lower() for kw in keywords):
-                    value = evidence_text[:300]
-                    sources = ["evidence_chunk"]
-                    confidence = 0.75
-                    notes = "Extracted from retrieved evidence"
-            fields[name] = BidField(value=value, sources=sources, confidence=confidence, notes=notes)
-        return BidRecord(
-            bid_id=bid_id,
-            fields=fields,
-            addendum_changes=["Addendum reconciliation applied"],
-            validation={
-                "passed": len([f for f in fields.values() if f.value]),
-                "failed": 0,
-                "not_found": len([f for f in fields.values() if not f.value]),
-            },
-        )
+
+def _patterns(field: str) -> tuple[str, ...]:
+    if field == "Bid Summary":
+        return (r"(?i).{0,160}(?:procure|purchase|seeking|requests|contract|award).{0,180}",)
+    return FIELD_PATTERNS.get(field, ())
+
+
+def _extract_field(name: str, evidence: list[dict[str, Any]]) -> BidField:
+    matches: list[tuple[str, dict[str, Any]]] = []
+    patterns = _patterns(name)
+    for source in evidence:
+        text = source["text"]
+        for pattern in patterns:
+            for match in re.finditer(pattern, text):
+                snippet = re.sub(r"\s+", " ", match.group(0)).strip(" \t\r\n:;,-")
+                if len(snippet) >= 5:
+                    matches.append((snippet, source))
+
+    # Deduplicate equivalent repeated lines while preserving document order.
+    seen: set[str] = set()
+    unique: list[tuple[str, dict[str, Any]]] = []
+    for snippet, source in matches:
+        key = snippet.casefold()
+        if key not in seen:
+            seen.add(key)
+            unique.append((snippet, source))
+
+    if not unique:
+        return BidField(value=None, confidence=0.0, notes="Not found in retrieved evidence")
+
+    if name == "Bid Summary":
+        text = " ".join(value for value, _ in unique[:3])
+        sentences = re.split(r"(?<=[.!?])\s+", text)
+        value = " ".join(sentences[:3])[:650]
+    elif name == "Additional Documentation Required":
+        labels = sorted({re.sub(r"\s+", " ", value).strip() for value, _ in unique[:8]})
+        value = "; ".join(labels)
+    elif name in {"Model_no", "Part_no"}:
+        vals = []
+        for snippet, _ in unique:
+            vals.extend(re.findall(r"\b(?:Latitude\s*\d{4}|WD\d{2}TB\d|\d{3}-[A-Z0-9]{4}|[A-Z]{2,}\d{2,}[A-Z0-9-]*)\b", snippet, re.I))
+        value = ", ".join(dict.fromkeys(vals)) if vals else unique[0][0]
+    else:
+        value = unique[0][0]
+
+    citations = []
+    for _, source in unique[:4]:
+        citation = SourceCitation(file=source["file"], page=source["page"], chunk_id=source["chunk_id"])
+        if citation not in citations:
+            citations.append(citation)
+    confidence = min(0.88, 0.58 + 0.08 * (len(citations) - 1))
+    return BidField(value=value, sources=citations, confidence=confidence, notes="Matched field-specific evidence; verify the cited passage")
+
+
+def build_bid_record(bid_id: str, evidence: list[dict[str, Any]]) -> BidRecord:
+    normalized = _evidence_records(evidence)
+    fields = {name: _extract_field(name, normalized) for name in FIELDS}
+    return BidRecord(
+        bid_id=bid_id,
+        fields=fields,
+        validation={
+            "passed": sum(field.value is not None and bool(field.sources) for field in fields.values()),
+            "failed": 0,
+            "not_found": sum(field.value is None for field in fields.values()),
+        },
+    )

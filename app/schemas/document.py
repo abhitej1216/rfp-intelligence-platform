@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import re
 from datetime import datetime
 from enum import Enum
+from pathlib import PurePosixPath
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -50,3 +52,23 @@ class DocumentRecord(BaseModel):
     page_count: int | None = Field(default=None, ge=0)
     extraction_warnings: list[str] = Field(default_factory=list)
     addendum_relationship: AddendumRelationship
+
+    @property
+    def document_type(self) -> str:
+        name = PurePosixPath(self.source_filename).stem.casefold()
+        if self.addendum_relationship.is_addendum:
+            return "addendum"
+        if "affidavit" in name:
+            return "affidavit"
+        if "spec" in name or "quote" in name:
+            return "specs"
+        if self.source_kind == DocumentKind.HTML:
+            return "bid_page"
+        return "rfp"
+
+    @property
+    def addendum_number(self) -> int | None:
+        match = re.search(r"addend(?:um|a)\s*(?:no\.?\s*)?(\d+)", self.source_filename, re.IGNORECASE)
+        if not match:
+            return None
+        return int(match.group(1))
